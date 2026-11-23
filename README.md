@@ -70,9 +70,20 @@ Heat Accumulates       Tunnels Cross 35°C         Miners Collapse      Fans Kic
 
 ---
 
-## 4. System Architecture
+## 4. System Architecture & Lab Bench Visuals
 
+### System Architecture Pipeline
 ![MineSafe System Architecture Diagram](docs/architecture-diagram.svg)
+
+### Virtual Tinkercad / Fritzing Breadboard & Wiring Lab Bench
+The system features an interactive, real-time virtual electronics testbench replicating physical lab wiring on a solderless breadboard. It illustrates the complete circuit schematic with real components (ESP32-S3 DevKitC-1, LM2596 buck converter, LiFePO4 battery pack, DHT22, MLX90614 IR thermopile, MQ-135 gas sensor, optocoupler relay, and industrial ventilation fan). Users can toggle pin labels, isolate jumper wire networks (Power, Sensors, Relay), and click components to inspect their pinouts and operating characteristics.
+
+![Tinkercad Virtual Breadboard & Wiring Lab Bench](docs/tinkercad-lab-bench.png)
+
+### Live 2D Underground Mine Cutaway Simulation
+A layered 2D simulation showing surface infrastructure (AI Control Hub, elevator shaft) connected to deep subterranean mine shafts (Zone A & Zone B). It showcases animated miners with 4-stage health reactions (Comfortable ➔ Heat Stress ➔ Exhaustion ➔ SOS Collapse) and automated proactive cooling fan response.
+
+![Live 2D Underground Mine Cutaway Simulation](docs/cave-simulation.png)
 
 ### End-to-End Architectural Data Flow
 
