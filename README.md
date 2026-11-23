@@ -1,36 +1,44 @@
 # ⛏️ MineSafe Thermal AI
 ### IoT-Based Predictive Thermal & Hazardous Gas Management System for Underground Mining
+*(Academic Proof-of-Concept Prototype & Virtual Simulation)*
 
+[![Project Type: Prototype Simulation](https://img.shields.io/badge/Project_Type-Prototype_Simulation-orange.svg?style=for-the-badge)](https://github.com/bhargav8-hub)
 [![IoT Course Project](https://img.shields.io/badge/Course_Project-IoT_%26_Embedded_Systems-blue.svg?style=for-the-badge&logo=arduino)](https://github.com/bhargav8-hub)
-[![Hardware: ESP32-S3](https://img.shields.io/badge/Hardware-ESP32--S3-red.svg?style=for-the-badge&logo=espressif)](https://www.espressif.com/)
+[![Hardware Model: ESP32-S3](https://img.shields.io/badge/Hardware_Model-ESP32--S3-red.svg?style=for-the-badge&logo=espressif)](https://www.espressif.com/)
 [![React 19 + TypeScript](https://img.shields.io/badge/Frontend-React_19_%2B_TS-61DAFB.svg?style=for-the-badge&logo=react)](https://react.dev/)
-[![Tailwind CSS v4](https://img.shields.io/badge/Styling-Tailwind_CSS_v4-38B2AC.svg?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-> **Live Demo & Simulation Web Application:** A complete, interactive underground mine simulation and virtual breadboard testbench engineered to eliminate heat stress and hazardous gas accumulation in underground mining tunnels using proactive, predictive IoT edge intelligence.
+> [!IMPORTANT]
+> **Academic Prototype & Simulation Disclaimer:**  
+> This project was developed as an **IoT Course Project & Academic Proof-of-Concept (PoC)**. It is **not** a physical industrial deployment in an operational mine. Instead, it is an interactive, software-in-the-loop **cyber-physical prototype simulation and virtual breadboard lab bench** engineered to validate sensor fusion, predictive thermal algorithms, and automated ventilation logic before real-world subterranean hardware prototyping.
 
 ---
 
 ## 📌 Table of Contents
-- [1. Executive Summary](#1-executive-summary)
+- [1. Executive Summary (Project Scope)](#1-executive-summary-project-scope)
 - [2. The Real-World Mining Challenge](#2-the-real-world-mining-challenge)
-- [3. How MineSafe Solves It](#3-how-minesafe-solves-it)
-- [4. System Architecture](#4-system-architecture)
-- [5. IoT Hardware Specification (Bill of Materials)](#5-iot-hardware-specification-bill-of-materials)
+- [3. How MineSafe Proves the Solution (Prototype Concept)](#3-how-minesafe-proves-the-solution-prototype-concept)
+- [4. System Architecture & Lab Bench Visuals](#4-system-architecture--lab-bench-visuals)
+- [5. Prototype Hardware Specification (Simulated Bill of Materials)](#5-prototype-hardware-specification-simulated-bill-of-materials)
 - [6. Pin-to-Pin Circuit Wiring Specification](#6-pin-to-pin-circuit-wiring-specification)
 - [7. Predictive Thermal AI Model (How It Works)](#7-predictive-thermal-ai-model-how-it-works)
 - [8. Dashboard & Interactive Simulation Features](#8-dashboard--interactive-simulation-features)
 - [9. Project Objectives & Compliance Proof](#9-project-objectives--compliance-proof)
 - [10. Quickstart & Installation Guide](#10-quickstart--installation-guide)
-- [11. Author & Project Metadata](#11-author--project-metadata)
+- [11. Prototype Limitations & Future Scope](#11-prototype-limitations--future-scope)
+- [12. Author & Project Metadata](#12-author--project-metadata)
 
 ---
 
-## 1. Executive Summary
+## 1. Executive Summary (Project Scope)
 
 In deep underground mining, extreme temperatures and toxic gas buildup are life-threatening operational hazards. Traditional ventilation systems suffer from a fatal flaw: **they are purely reactive**. Exhaust fans only activate after ambient air temperatures cross critical thresholds (>35°C), by which time miners are already suffering from heat exhaustion, heat stroke, or toxic inhalation. Furthermore, running massive industrial ventilation fans at continuous 100% speed accounts for **40% to 60% of an underground mine's total electricity bill**.
 
-**MineSafe Thermal AI** is an IoT-driven cyber-physical solution. By fusing ambient air sensors (DHT22), infrared surface thermopiles (MLX90614), and electrochemical gas sensors (MQ-135) through an **ESP32-S3 edge node**, the system calculates thermal velocity ($dT/dt$) to **predict underground temperatures 10 minutes into the future**. It proactively ramps up ventilation *before* dangerous heat pockets form, protecting miner lives while cutting idle ventilation energy waste by **~35%**.
+**MineSafe Thermal AI** was built as a **proof-of-concept prototype simulation** to solve this challenge. Rather than testing expensive or dangerous hardware directly inside real mine shafts, this project models an entire cyber-physical IoT system:
+- **Simulated Multi-Sensor Fusion:** Models live telemetry from ambient air sensors (DHT22), non-contact infrared rock face thermopiles (MLX90614), and toxic air quality sensors (MQ-135).
+- **Edge Microcontroller Architecture:** Emulates an ESP32-S3 microcontroller executing a FreeRTOS edge telemetry loop with local fail-safe overrides.
+- **Predictive AI Lookahead:** Employs thermal velocity derivative mathematics ($dT/dt$) to forecast tunnel temperatures **10 minutes into the future**.
+- **Virtual Breadboard Lab Bench:** Provides an interactive Tinkercad/Fritzing-style electronics testbench showing physical pin-to-pin jumper wiring, power step-down, battery backup, and relay switching.
 
 ---
 
@@ -291,12 +299,26 @@ Creates an optimized static production build in the `dist/` directory ready for 
 
 ---
 
-## 11. Author & Project Metadata
+## 11. Prototype Limitations & Future Scope
+
+As an academic prototype simulation, this project establishes the feasibility of predictive thermal automation while acknowledging specific prototype boundaries:
+
+| Dimension | Current Prototype Simulation State | Future Physical Deployment Scope |
+|-----------|-----------------------------------|----------------------------------|
+| **Hardware Environment** | Virtual Tinkercad/Fritzing breadboard lab bench model | Physical PCB fabrication with Flameproof / ATEX-certified enclosures |
+| **Telemetry & Data** | Mathematical simulated telemetry stream with real sensor noise | Physical RS-485 / LoRaWAN transceivers deployed in mine shafts |
+| **Ventilation Control** | Virtual relay switching with simulated CFM airflow models | Modbus-RTU / PLC industrial VFD (Variable Frequency Drive) fan integration |
+| **Worker Safety** | 4-stage biometric comfort reaction & simulation triggers | Integration with wearable miner smart helmets & pulse oximeters |
+
+---
+
+## 12. Author & Project Metadata
 
 - **Author:** Bhargav ([@bhargav8-hub](https://github.com/bhargav8-hub))
 - **Course Project:** Internet of Things (IoT) & Embedded Systems Capstone
+- **Project Classification:** Academic Proof-of-Concept (PoC) Prototype & Simulation Environment
 - **Primary Domain:** Subterranean IoT, Industrial Safety, Predictive Thermal Automation
 - **License:** Open Source under the [MIT License](LICENSE)
 
 ---
-*MineSafe Thermal AI — Protecting underground miners through predictive IoT engineering.*
+*MineSafe Thermal AI — An academic prototype simulation demonstrating predictive IoT thermal safety.*
