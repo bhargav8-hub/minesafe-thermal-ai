@@ -18,7 +18,7 @@
 - [1. Executive Summary (Project Scope)](#1-executive-summary-project-scope)
 - [2. The Real-World Mining Challenge](#2-the-real-world-mining-challenge)
 - [3. How MineSafe Proves the Solution (Prototype Concept)](#3-how-minesafe-proves-the-solution-prototype-concept)
-- [4. System Architecture & Lab Bench Visuals](#4-system-architecture--lab-bench-visuals)
+- [4. System Architecture & Prototype Wiring Lab Bench](#4-system-architecture--prototype-wiring-lab-bench)
 - [5. Prototype Hardware Specification (Simulated Bill of Materials)](#5-prototype-hardware-specification-simulated-bill-of-materials)
 - [6. Pin-to-Pin Circuit Wiring Specification](#6-pin-to-pin-circuit-wiring-specification)
 - [7. Predictive Thermal AI Model (How It Works)](#7-predictive-thermal-ai-model-how-it-works)
@@ -78,20 +78,13 @@ Heat Accumulates       Tunnels Cross 35°C         Miners Collapse      Fans Kic
 
 ---
 
-## 4. System Architecture & Lab Bench Visuals
+## 4. System Architecture & Prototype Wiring Lab Bench
 
-### System Architecture Pipeline
-![MineSafe System Architecture Diagram](docs/architecture-diagram.svg)
+The prototype features an interactive virtual electronics testbench modeled after Tinkercad / Fritzing breadboard circuits. It illustrates the end-to-end physical component wiring, power distribution rails (12V, 5.0V, 3.3V), and edge-to-cloud telemetry flow:
 
-### Virtual Tinkercad / Fritzing Breadboard & Wiring Lab Bench
-The system features an interactive, real-time virtual electronics testbench replicating physical lab wiring on a solderless breadboard. It illustrates the complete circuit schematic with real components (ESP32-S3 DevKitC-1, LM2596 buck converter, LiFePO4 battery pack, DHT22, MLX90614 IR thermopile, MQ-135 gas sensor, optocoupler relay, and industrial ventilation fan). Users can toggle pin labels, isolate jumper wire networks (Power, Sensors, Relay), and click components to inspect their pinouts and operating characteristics.
+![Physical Breadboard & Wiring Architecture Lab Bench](docs/tinkercad-lab-bench.png)
 
-![Tinkercad Virtual Breadboard & Wiring Lab Bench](docs/tinkercad-lab-bench.png)
-
-### Live 2D Underground Mine Cutaway Simulation
-A layered 2D simulation showing surface infrastructure (AI Control Hub, elevator shaft) connected to deep subterranean mine shafts (Zone A & Zone B). It showcases animated miners with 4-stage health reactions (Comfortable ➔ Heat Stress ➔ Exhaustion ➔ SOS Collapse) and automated proactive cooling fan response.
-
-![Live 2D Underground Mine Cutaway Simulation](docs/cave-simulation.png)
+*Figure: Complete hardware circuit breadboard architecture showing 12V LiFePO4 UPS battery backup, LM2596 step-down regulator, ESP32-S3 microcontroller, DHT22, MLX90614 IR thermopile, MQ-135 gas sensor, 5V optocoupled relay, and 12V ventilation fan.*
 
 ### End-to-End Architectural Data Flow
 
